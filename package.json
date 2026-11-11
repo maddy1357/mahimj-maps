@@ -1,0 +1,16 @@
+{
+  "name": "mahimj-maps",
+  "version": "1.0.0",
+  "description": "MahimJ Maps - an interactive 2D web map (Google Maps-style) with search, directions and multiple map styles, built with Leaflet and OpenStreetMap.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["maps", "leaflet", "openstreetmap", "directions", "routing", "geocoding"],
+  "author": "maddy1357",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  }
+}

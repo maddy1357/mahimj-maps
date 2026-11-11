@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MahimJ Maps</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <aside id="panel">
+    <header>
+      <h1>🗺️ MahimJ Maps</h1>
+      <button id="togglePanel" title="Collapse panel">−</button>
+    </header>
+
+    <div id="panelBody">
+      <div class="tabs">
+        <button data-tab="search" class="active">Search</button>
+        <button data-tab="directions">Directions</button>
+      </div>
+
+      <!-- Search tab -->
+      <section id="tab-search" class="tab active">
+        <form id="searchForm" autocomplete="off">
+          <input id="searchInput" type="search" placeholder="Search places, addresses…" />
+          <button type="submit" class="primary">Search</button>
+        </form>
+        <ul id="searchResults" class="results"></ul>
+        <div id="placeCard" class="card hidden"></div>
+      </section>
+
+      <!-- Directions tab -->
+      <section id="tab-directions" class="tab">
+        <form id="routeForm" autocomplete="off">
+          <div class="field">
+            <span class="dot a">A</span>
+            <input id="fromInput" type="text" placeholder="Start (or use my location)" />
+            <button type="button" id="fromMe" title="Use my location">📍</button>
+          </div>
+          <div class="field">
+            <span class="dot b">B</span>
+            <input id="toInput" type="text" placeholder="Destination" />
+            <button type="button" id="swapBtn" title="Swap">⇅</button>
+          </div>
+          <button type="submit" class="primary full">Get directions</button>
+        </form>
+        <div id="routeSummary" class="card hidden"></div>
+        <ol id="routeSteps" class="steps"></ol>
+      </section>
+    </div>
+  </aside>
+
+  <div id="coords">Click anywhere on the map for an address</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
