@@ -203,4 +203,4 @@ The public Nominatim, Photon, Overpass and OSRM servers are shared community res
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE).
+Copyright (c) 2026 mahimj. All rights reserved. Proprietary software — see [LICENSE](LICENSE).
