@@ -1,4 +1,6 @@
 node_modules/
+# runtime data written by the backend (saved places)
+/data/
 .DS_Store
 Thumbs.db
 *.log
